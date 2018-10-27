@@ -200,7 +200,7 @@ define(['core/cell'], function(Cell) {
               cell.playerIdNextGeneration = undefined;
             }
           } else {
-            if (livingNeighborCount === 3) {
+            if (livingNeighborCount === 2 || livingNeighborCount === 3) {
               // dead cells with three neighbors become live cells
               cell.aliveNextGeneration = true;
 
