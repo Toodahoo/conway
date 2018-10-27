@@ -200,8 +200,8 @@ define(['core/cell'], function(Cell) {
               cell.playerIdNextGeneration = undefined;
             }
           } else {
-            if (livingNeighborCount === 3) {
-              // dead cells with three neighbors become live cells
+            if (livingNeighborCount === 6 || livingNeighborCount === 3) {
+              // dead cells with three (or 6 cus highlife lololo) neighbors become live cells
               cell.aliveNextGeneration = true;
 
               cell.playerIdNextGeneration = this.getDominantNeighbor(cell.x, cell.y);
